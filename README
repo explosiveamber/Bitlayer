@@ -1,0 +1,26 @@
+The Bitlayer project was originally advanced in the middle during the Green Shoes Course 8th Batch on of RubyLearning.org.
+
+
+
+Development goals
+
+Bitlayer should eventually evolve to be fully compatible with v.3 of the Bit.ly API in six months.
+After meeting the deadline, development will be continued,  This process can certainly become smoothier and faster with the help of (hopefully!) many contributors.  
+
+Usabilty goals
+
+With just a few controls, you gain he power to get shortened links without having to wait for your browser to do the job. In addition, you can copy the shortened URL to system clipboard with the push of a button. 
+
+Compatibility goals
+
+Bitlayer is aiming to evolve into a stable application for shortening URLs directly from your desktop on all platforms supporting Ruby. In general, it will run on whatever version of Ruby that supports Green Shoes.
+
+
+
+Dependencies
+
+Green Shoes gem by ashbb
+to install type at your command prompt: gem install green_shoes
+
+Bitly gem by Phil Nash
+to install type at your command prompt: gem install bitly
