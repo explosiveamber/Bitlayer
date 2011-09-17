@@ -4,7 +4,7 @@ require 'green_shoes'
 
 require 'bitly'
 
-Shoes.app :title => 'Get Bit.ly URL', :height => 100, :width => 500 do
+Shoes.app :title => 'Get Bit.ly URL', :height => 100, :width => 480 do
 
 #extend HH::Markup
 
@@ -19,6 +19,7 @@ s = flow do
 @logo = image 'img/logo.png', :top => 0
 
 @logo.click do
+@options.call
 end
 
 @urlbox = edit_line :width => 256, :left => 50, :top => 40
@@ -62,7 +63,23 @@ end
 	@result.text=strong(short_url)
 	end
 	#end
-	
+@options = Proc.new do |default|
+	window :title => 'Settings', :height => 240, :width=> 540 do
+	flow do 
+	background rgb(93,173,245)
+	@msg = "#{strong('Settings')}"
+	tagline strong @msg
+	  para strong('Username');edit_line :width => 128
+	  para
+	  para strong('API Key'); edit_line :width => 256
+	  flow do 
+	    para
+	    para strong("To confirm changes, please click on 'Apply'.")
+	    button 'Apply'; button 'Cancel'
+	  end
+  end
+  end
+	end	
 end
 end
 
